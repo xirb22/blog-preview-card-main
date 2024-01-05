@@ -10,25 +10,137 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* TODO Use local ttf font */
+    @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
+
+    :root {
+      --clr-yellow: hsl(47, 88%, 63%);
+   
+      --clr-white: hsl(0, 0%, 100%);
+      --clr-grey: hsl(0, 0%, 50%);
+      --clr-black: hsl(0, 0%, 7%);
+    }
+
+
+    body {
+
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--clr-yellow);
+
+      font-family: 'Figtree', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .card-wrapper {
+
+      width: min-content;
+
+      background-color: var(--clr-white);
+
+      border: 1px solid var(--clr-black);
+      border-radius: 1rem;
+      box-shadow: 10px 10px 0px 0px;
+    }
+
+    .illustration {
+
+      margin: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .tag {
+
+      width: fit-content;
+
+      margin: 0rem 1.5rem;
+      padding: 0.3rem 1rem;
+
+      background: var(--clr-yellow);
+
+      border-radius: .3rem;
+
+      font-weight: 800;
+
+      text-align: center;
+
+    }
+
+    .date {
+      margin: 1rem 1.5rem;
+      font-weight: 800;
+    }
+
+    .title {
+
+      margin: 1rem 1.5rem;
+      font-weight: 800;
+    }
+
+    .title:hover {
+      color: var(--clr-yellow);
+      cursor: pointer;
+    }
+
+    .description {
+
+      margin: 1rem 1.5rem;
+      color: var(--clr-grey)
+    }
+
+    .profile {
+
+      margin: 1.5rem;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      justify-content: flex-start;
+
+      font-weight: 800;
+    }
+
+    .profile-picture {
+      width: 2rem;
+    }
+
   </style>
+
 </head>
+
 <body>
 
-  Learning
+  <div class="card-wrapper">
+    <img src="assets\images\illustration-article.svg" alt="" class="illustration" />
 
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
+    <p class="tag">
+      Learning
+    </p>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p class="date">
+      Published 21 Dec 2023
+    </p>
+    
+    <h2 class="title">HTML & CSS foundations</h2>
+
+    
+    <p class="description">
+      These languages are the backbone of every website, defining structure, content, and presentation.
+    </p>
+
+    <div class="profile">
+      <img src="assets\images\image-avatar.webp" alt="" class="profile-picture">
+      Greg Hooper
+    </div>
+
   </div>
+
 </body>
+
 </html>
