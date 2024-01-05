@@ -22,10 +22,6 @@
       --clr-black: hsl(0, 0%, 7%);
     }
 
-    /* * {
-      border: 3px solid red;
-    } */
-
 
     body {
 
@@ -43,21 +39,13 @@
       font-size: 16px;
       font-weight: 600;
 
-      border: 3px solid green;
-    }
-
-    .card-wrapper {
-
-      border: 3px solid blue;
-
-
     }
 
     .card {
-
+      
       margin: 1.5rem;
 
-      width: min-content;
+      width: fit-content;
       background-color: var(--clr-white);
 
       border: 1px solid var(--clr-black);
@@ -66,10 +54,12 @@
     }
 
     .illustration {
-
-      margin: 1.5rem;
+      /*TODO fix margin given inset clip */
+      margin: 1.5rem 0rem;
+      border: 5rem 5rem;
       border-radius: 1rem;
-      width: 350px;
+      /* width: 300px; */
+      clip-path: inset(0rem 28px round .5rem)
     }
 
     .tag {
@@ -84,6 +74,7 @@
       border-radius: .3rem;
 
       font-weight: 800;
+      font-size: .82rem;
 
       text-align: center;
 
@@ -91,13 +82,14 @@
 
     .date {
       margin: 1rem 1.5rem;
-      font-weight: 800;
+      font-weight: 600;
+      font-size: .82rem;
     }
 
     .title {
 
       margin: 1rem 1.5rem;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 800;
     }
 
@@ -109,7 +101,8 @@
     .description {
 
       margin: 1rem 1.5rem;
-      color: var(--clr-grey)
+      color: var(--clr-grey);
+      font-weight: 600;
     }
 
     .profile {
