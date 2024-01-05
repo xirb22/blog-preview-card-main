@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Blog preview card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     /* TODO Use local ttf font */
     @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
 
     :root {
       --clr-yellow: hsl(47, 88%, 63%);
-   
+
       --clr-white: hsl(0, 0%, 100%);
       --clr-grey: hsl(0, 0%, 50%);
       --clr-black: hsl(0, 0%, 7%);
     }
 
+    /* * {
+      border: 3px solid red;
+    } */
+
 
     body {
 
+
       display: flex;
       min-height: 100vh;
+
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -35,12 +42,22 @@
       font-family: 'Figtree', sans-serif;
       font-size: 16px;
       font-weight: 600;
+
+      border: 3px solid green;
     }
 
     .card-wrapper {
 
-      width: min-content;
+      border: 3px solid blue;
 
+
+    }
+
+    .card {
+
+      margin: 1.5rem;
+
+      width: min-content;
       background-color: var(--clr-white);
 
       border: 1px solid var(--clr-black);
@@ -52,6 +69,7 @@
 
       margin: 1.5rem;
       border-radius: 1rem;
+      width: 350px;
     }
 
     .tag {
@@ -79,6 +97,7 @@
     .title {
 
       margin: 1rem 1.5rem;
+      font-size: 1.8rem;
       font-weight: 800;
     }
 
@@ -109,7 +128,6 @@
     .profile-picture {
       width: 2rem;
     }
-
   </style>
 
 </head>
@@ -117,26 +135,28 @@
 <body>
 
   <div class="card-wrapper">
-    <img src="assets\images\illustration-article.svg" alt="" class="illustration" />
+    <div class="card">
+      <img src="assets\images\illustration-article.svg" alt="" class="illustration" />
 
-    <p class="tag">
-      Learning
-    </p>
-  
-    <p class="date">
-      Published 21 Dec 2023
-    </p>
-    
-    <h2 class="title">HTML & CSS foundations</h2>
+      <p class="tag">
+        Learning
+      </p>
 
-    
-    <p class="description">
-      These languages are the backbone of every website, defining structure, content, and presentation.
-    </p>
+      <p class="date">
+        Published 21 Dec 2023
+      </p>
 
-    <div class="profile">
-      <img src="assets\images\image-avatar.webp" alt="" class="profile-picture">
-      Greg Hooper
+      <h1 class="title">HTML & CSS foundations</h1>
+
+
+      <p class="description">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
+
+      <div class="profile">
+        <img src="assets\images\image-avatar.webp" alt="" class="profile-picture">
+        Greg Hooper
+      </div>
     </div>
 
   </div>
