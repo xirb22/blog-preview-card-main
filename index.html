@@ -12,7 +12,7 @@
 
   <style>
     /* TODO Use local ttf font */
-    @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;800&display=swap");
 
     :root {
       --clr-yellow: hsl(47, 88%, 63%);
@@ -22,9 +22,13 @@
       --clr-black: hsl(0, 0%, 7%);
     }
 
+    html {
+      font-family: 'Figtree', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
 
     body {
-
 
       display: flex;
       min-height: 100vh;
@@ -35,31 +39,30 @@
 
       background: var(--clr-yellow);
 
-      font-family: 'Figtree', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
+
 
     }
 
     .card {
       
-      margin: 1.5rem;
+      /* max-width: 80vw; */
+      margin: 1rem 1.5rem;
 
-      width: fit-content;
       background-color: var(--clr-white);
 
       border: 1px solid var(--clr-black);
       border-radius: 1rem;
-      box-shadow: 10px 10px 0px 0px;
+      box-shadow: 8px 8px 0px 0px;
     }
 
     .illustration {
-      /*TODO fix margin given inset clip */
-      margin: 1.5rem 0rem;
-      border: 5rem 5rem;
+
+      max-width: 80vw;
+      height: 201px;
+      margin: 1.5rem 1.5em;
       border-radius: 1rem;
-      /* width: 300px; */
-      clip-path: inset(0rem 28px round .5rem)
+      object-fit: cover;
+      clip-path: content-box;
     }
 
     .tag {
@@ -82,12 +85,11 @@
 
     .date {
       margin: 1rem 1.5rem;
-      font-weight: 600;
       font-size: .82rem;
+      font-weight: 600;
     }
 
     .title {
-
       margin: 1rem 1.5rem;
       font-size: 1.4rem;
       font-weight: 800;
@@ -99,11 +101,20 @@
     }
 
     .description {
-
       margin: 1rem 1.5rem;
       color: var(--clr-grey);
       font-weight: 600;
+      max-width: 330px;
+      line-height: 1.4rem;
     }
+
+
+    @media screen and (max-width: 400px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
 
     .profile {
 
@@ -121,6 +132,7 @@
     .profile-picture {
       width: 2rem;
     }
+
   </style>
 
 </head>
