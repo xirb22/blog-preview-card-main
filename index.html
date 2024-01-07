@@ -11,12 +11,14 @@
   <title>Frontend Mentor | Blog preview card</title>
 
   <style>
-    /* TODO Use local ttf font */
-    @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;800&display=swap");
+
+    @font-face {
+      font-family: 'Figtree';
+      src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+    }
 
     :root {
       --clr-yellow: hsl(47, 88%, 63%);
-
       --clr-white: hsl(0, 0%, 100%);
       --clr-grey: hsl(0, 0%, 50%);
       --clr-black: hsl(0, 0%, 7%);
@@ -28,8 +30,13 @@
       font-weight: 600;
     }
 
-    body {
+    @media screen and (max-width: 400px) {
+      html {
+        font-size: 14px;
+      }
+    }
 
+    body {
       display: flex;
       min-height: 100vh;
 
@@ -38,14 +45,9 @@
       justify-content: center;
 
       background: var(--clr-yellow);
-
-
-
     }
 
-    .card {
-      
-      /* max-width: 80vw; */
+    .card {     
       margin: 1rem 1.5rem;
 
       background-color: var(--clr-white);
@@ -56,7 +58,6 @@
     }
 
     .illustration {
-
       max-width: 80vw;
       height: 201px;
       margin: 1.5rem 1.5em;
@@ -95,8 +96,15 @@
       font-weight: 800;
     }
 
-    .title:hover {
+    .title:hover,
+    .profile:hover {
       color: var(--clr-yellow);
+      cursor: pointer;
+    }
+
+    .tag:hover {
+      color: var(--clr-yellow);
+      background: var(--clr-black);
       cursor: pointer;
     }
 
@@ -108,16 +116,7 @@
       line-height: 1.4rem;
     }
 
-
-    @media screen and (max-width: 400px) {
-      html {
-        font-size: 14px;
-      }
-    }
-
-
     .profile {
-
       margin: 1.5rem;
 
       display: flex;
